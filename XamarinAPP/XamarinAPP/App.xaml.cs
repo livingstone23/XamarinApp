@@ -10,7 +10,7 @@ namespace XamarinAPP
         {
             InitializeComponent();
 
-            MainPage = new PaginaPrincipal();
+            MainPage = new NavigationPage( new ViewPage.SegundaPagina());
         }
         protected override void OnStart()
         {

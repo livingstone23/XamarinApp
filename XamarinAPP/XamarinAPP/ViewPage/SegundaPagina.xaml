@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Login"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAPP.ViewPage.SegundaPagina">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SPAIN" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="Tomato"
+                   Margin="5"
+                   Padding="0,10,0,10"
+                   />
+
+            <Label Text="SOFTLAND" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="ORANGE"
+                   Margin="5, 10, 5, 6"
+                   />
+            <Image 
+
+                Source="https://www.vectorkhazana.com/assets/images/products/Punisher_Skull_Marvel_Hulk_Grunge.png"
+                    WidthRequest="200"
+                    HeightRequest="300"
+                    HorizontalOptions="CenterAndExpand"
+                />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Text="Usuario" 
+                    TextColor="Black" 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    />
+               
+                <Label Text="Contraseña" 
+                    TextColor="Black"  
+                    Grid.Column="0" 
+                    Grid.Row="2" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                       
+                       />
+
+                <Entry  
+                    TextColor="Black"
+                    Placeholder="Click para ingresar usuario"
+                    IsPassword="True"
+                    PlaceholderColor="Black"
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    FontSize="12"
+                    />
+
+                <Entry  
+                    TextColor="Black"
+                    Placeholder="Click para contraseña"
+                    PlaceholderColor="Black"
+                    Grid.Column="1" 
+                    Grid.Row="2" 
+                    FontSize="12"
+                    />
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="Ingresa al Sistema"
+                    HorizontalOptions="Center"
+                    Grid.ColumnSpan="2"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    />
+
+                <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
+                            HeightRequest="10" >
+
+                    <Button Text="Ingresar" Background="Tomato"/>
+                    <Button Text="Registrar" Background="teal" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"/>
+                
+                </StackLayout> 
+                
+            </Grid>
+            
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

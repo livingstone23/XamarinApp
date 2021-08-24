@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="black"
+             Title="Información General"         
+             x:Class="XamarinAPP.ViewPage.RegistroUsuario">
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="SPAIN" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="Tomato"
+                   Padding="0,10,0,10"
+                   />
+
+            <Label Text="SOFTLAND" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="ORANGE"
+
+                   Padding="0,10,0,10"
+                   />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
