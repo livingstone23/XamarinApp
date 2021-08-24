@@ -5,10 +5,87 @@
              x:Class="XamarinAPP.PaginaPrincipal">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="SPAIN" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="Tomato"
+                   Margin="5"
+                   Padding="0,10,0,10"
+                   />
+            
+            <Label Text="SOFTLAND" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   Background="ORANGE"
+                   Margin="5, 10, 5, 6"
+                   />
+
+            
+
+
             <Label Text="Hola Mundo!"
                 VerticalOptions="CenterAndExpand" 
                 TextColor="White"
+                HorizontalOptions="CenterAndExpand" 
+                TextTransform="Uppercase"   
+                   />
+
+            <Label 
+                TextType="Html"
+                Text="&lt;h4>Registrate para ingresar&lt;/h4>"
+                VerticalOptions="CenterAndExpand" 
+                TextColor="White"
                 HorizontalOptions="CenterAndExpand" />
+
+           
+           
+
+            <Image 
+                BackgroundColor="White"
+                Source="https://i.pinimg.com/736x/ac/b8/b2/acb8b2f19402d5a03fd52b6cf04cbeb9.jpg"
+                    WidthRequest="200"
+                    HeightRequest="300"
+                    HorizontalOptions="CenterAndExpand"
+                />
+
+
+            <StackLayout
+                Orientation="Vertical"
+                >
+                <Label 
+                Text="Bienvenido a mi nueva aplicacion donde podras utilizar toda la funcionalidad de Xamarin"
+                LineBreakMode="TailTruncation"
+                VerticalOptions="CenterAndExpand" 
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"     
+                    x:Name="lblTexto"
+                    />
+
+                <Button
+                    
+                    Text="Ver mas"
+                    BackgroundColor="White"
+                    FontSize="10"
+                    HeightRequest="35"
+                    x:Name="btnVermas"
+                    Clicked="btnVerMas_Clicked"
+                />
+
+            </StackLayout>
+
+           
+
+
+            <Label Text="Livingstone Cano"
+                   TextColor="Yellow" 
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   CharacterSpacing=".1"
+                   />
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
