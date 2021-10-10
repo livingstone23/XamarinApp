@@ -3,6 +3,11 @@
              Title="Login"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAPP.ViewPage.SegundaPagina">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarAgregar" Clicked="toolbarAgregar_Clicked" IconImageSource="ic_ALI.png" />
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
             <Label Text="SPAIN" 

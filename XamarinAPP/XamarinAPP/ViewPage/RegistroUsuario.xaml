@@ -1,27 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="black"
+             BackgroundColor="White"
              Title="Información General"         
              x:Class="XamarinAPP.ViewPage.RegistroUsuario">
     
     <ContentPage.Content>
         <StackLayout>
 
-            <Label Text="SPAIN" 
-                   HorizontalTextAlignment="Center"
-                   TextColor="White"
-                   Background="Tomato"
-                   Padding="0,10,0,10"
-                   />
 
-            <Label Text="SOFTLAND" 
-                   HorizontalTextAlignment="Center"
-                   TextColor="White"
-                   Background="ORANGE"
+            <Label Text="Registro de Usuario" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center"/>
+            
+            <BoxView HeightRequest="2" BackgroundColor="GreenYellow" />
 
-                   Padding="0,10,0,10"
-                   />
+            <Grid Margin="10,15,0,0">
+                
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Nombre" VerticalOptions="Center" />
+                <Entry Grid.Column="1" Grid.Row="0" Placeholder="Digite el usuario"/>
+
+            </Grid>
 
         </StackLayout>
     </ContentPage.Content>

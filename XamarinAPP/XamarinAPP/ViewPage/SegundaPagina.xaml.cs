@@ -21,5 +21,10 @@ namespace XamarinAPP.ViewPage
         {
             await Navigation.PushAsync(new RegistroUsuario());
         }
+
+        private async void toolbarAgregar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistroUsuario());
+        }
     }
 }

@@ -133,4 +133,7 @@
       <Name>XamarinAPP</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_ALI.png" />
+  </ItemGroup>
 </Project>
