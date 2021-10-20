@@ -18,6 +18,8 @@
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
+            
+            
         </Label>
     </StackLayout>
 
