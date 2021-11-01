@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding titulo}"
+             x:Class="XamarinAPP.ViewPage.FormCategorias">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding oCategoriaCLS}">
+            <Label Text="Id Categoria" />
+            <Entry Text="{Binding iidcategoria}" />
+            <Label Text="Nombre Categoria" />
+            <Entry Text="{Binding nombre}" />
+            <Label Text="Descripcion Categoria" />
+            <Entry Text="{Binding descripcion}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

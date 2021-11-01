@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAPP.ViewPage.Producto">
+
+    <ContentPage.Content>
+
+        <ListView ItemsSource="{Binding listaProducto}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding nombre,StringFormat='Nombre Producto : {0}'}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                            <Label Text="{Binding precio,StringFormat='Precio: {0}'}"  Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding stock, StringFormat='Stock: {0}'}"  Grid.Column="1" Grid.Row="1"  HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding nombrecategoria,StringFormat='Categoria: {0}'}"  Grid.Column="2"  Grid.Row="1" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </ContentPage.Content>
+</ContentPage>

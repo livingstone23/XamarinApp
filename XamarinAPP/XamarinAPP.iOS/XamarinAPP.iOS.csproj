@@ -136,4 +136,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\ic_ALI.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_producto.png" />
+  </ItemGroup>
 </Project>

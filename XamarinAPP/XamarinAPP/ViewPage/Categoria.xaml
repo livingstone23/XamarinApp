@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAPP.ViewPage.Categoria">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarAgregar" Clicked="toolbarAgregar_Clicked"  IconImageSource="ic_agregar.png" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <ListView ItemsSource="{Binding listaCategoria }"
+                  x:Name="lstCategoria" 
+                  ItemSelected="lstCategoria_ItemSelected"
+                  Margin="5" 
+                  HasUnevenRows="True" 
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20" />
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding nombre}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"
+                                   FontSize="14"
+                                   />
+                            <Label Text="{Binding descripcion}" Grid.Column="0" Grid.Row="1"  />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </ContentPage.Content>
+    
+    
+    
+</ContentPage>

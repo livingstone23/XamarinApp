@@ -32,7 +32,7 @@
                     HorizontalOptions="CenterAndExpand"
                 />
 
-            <Grid>
+            <Grid BindingContext="{Binding ousuarioCLS}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
@@ -66,20 +66,22 @@
                 <Entry  
                     TextColor="Black"
                     Placeholder="Click para ingresar usuario"
-                    IsPassword="True"
                     PlaceholderColor="Black"
                     Grid.Column="1" 
                     Grid.Row="1" 
                     FontSize="12"
+                    Text="{Binding nombreusuario}"
                     />
 
                 <Entry  
                     TextColor="Black"
                     Placeholder="Click para contraseña"
+                    IsPassword="True"
                     PlaceholderColor="Black"
                     Grid.Column="1" 
                     Grid.Row="2" 
                     FontSize="12"
+                    Text="{Binding contra}"
                     />
 
                 <Label
@@ -95,8 +97,8 @@
                 <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand"
                             HeightRequest="10" >
 
-                    <Button Text="Ingresar" Background="Tomato"/>
-                    <Button Text="Registrar" Background="teal" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"/>
+                    <Button Text="Ingresar" Background="Tomato" x:Name="btnIngresar" Clicked="btnIngresar_Clicked"/>
+                    <Button Text="Registrar" Background="Blue" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"/>
                 
                 </StackLayout> 
                 
