@@ -99,10 +99,14 @@
 
                     <Button Text="Ingresar" Background="Tomato" x:Name="btnIngresar" Clicked="btnIngresar_Clicked"/>
                     <Button Text="Registrar" Background="Blue" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"/>
+
+                    
+
+                </StackLayout>
                 
-                </StackLayout> 
-                
+
             </Grid>
+            <Button Text="Asignar" Background="Tomato" x:Name="btnAsignar" Clicked="btnAsignar_Clicked"/>
             
             
             

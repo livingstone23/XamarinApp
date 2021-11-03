@@ -4,13 +4,25 @@
              Title="{Binding titulo}"
              x:Class="XamarinAPP.ViewPage.FormCategorias">
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding oCategoriaCLS}">
+        <StackLayout BindingContext="{Binding oCategoriaCLS}"  Margin="5" >
+            
             <Label Text="Id Categoria" />
             <Entry Text="{Binding iidcategoria}" />
             <Label Text="Nombre Categoria" />
             <Entry Text="{Binding nombre}" />
             <Label Text="Descripcion Categoria" />
-            <Entry Text="{Binding descripcion}" />
+            <Editor Text="{Binding descripcion}" HeightRequest="100"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <Button Text="Guardar" x:Name="btnGuardarCategoria" BackgroundColor="Green"
+                    Clicked="btnGuardarCategoria_Clicked" />
+
+                <Button Text="Regresar" x:Name="btnRegresarCategoria"
+                    BackgroundColor="Red" Clicked="btnRegresarCategoria_Clicked" />
+
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

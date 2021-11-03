@@ -1,4 +1,4 @@
-﻿using MiPrimeraAplicacionEnXamarinForm.Clases;
+﻿using XamarinAPP.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +44,12 @@ namespace XamarinAPP.ViewPage
             {
                 DisplayAlert("Error", "Contraseña o usuario incorrecto", "Cancelar");
             }
+        }
+
+        private void btnAsignar_Clicked(object sender, EventArgs e)
+        {
+            ousuarioCLS.nombreusuario = "q";
+            ousuarioCLS.contra = "q";
         }
     }
 }

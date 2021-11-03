@@ -8,6 +8,7 @@ namespace XamarinAPP
     public partial class App : Application
     {
         public static NavigationPage Navigate { get; internal set; }
+        public static PPrincipal MenuApp { get; internal set; }
 
         public App()
         {

@@ -1,4 +1,4 @@
-﻿using MiPrimeraAplicacionEnXamarinForm.Clases;
+﻿using XamarinAPP.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +40,7 @@ namespace XamarinAPP.ViewPage
                     App.Current.MainPage = new SegundaPagina(); 
                     break;
             }
+            App.MenuApp.IsPresented = false;
 
             //DisplayAlert("Aviso", omenuCLS.nombreitem, "Cancelar");
         }

@@ -18,6 +18,7 @@ namespace XamarinAPP.ViewPage
             //Propiedad vinculada al menu para navegar
             //Debe generarse tambien en el App.xaml.
             App.Navigate = Navigation;
+            App.MenuApp = this;
         }
     }
 }

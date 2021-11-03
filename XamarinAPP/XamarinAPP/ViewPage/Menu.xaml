@@ -4,7 +4,7 @@
              Title="Menu"
              x:Class="XamarinAPP.ViewPage.Menu">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="15">
 
             <Label Text="Bienvenido al sistema" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="20" />
             <ListView ItemsSource="{Binding listamenu}" Margin="0,15" x:Name="lstMenu" 

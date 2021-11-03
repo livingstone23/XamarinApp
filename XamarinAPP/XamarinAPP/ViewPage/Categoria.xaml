@@ -9,37 +9,51 @@
 
     <ContentPage.Content>
 
-        <ListView ItemsSource="{Binding listaCategoria }"
-                  x:Name="lstCategoria" 
-                  ItemSelected="lstCategoria_ItemSelected"
-                  Margin="5" 
-                  HasUnevenRows="True" 
-                  >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
+        <StackLayout>
+            <SearchBar Placeholder="Ingrese nombre categoria" x:Name="searchCategoria" 
+                       TextChanged="searchCategoria_TextChanged"/>
+        
 
-                            </Grid.ColumnDefinitions>
+            <ScrollView BindingContext="{Binding oEntityCLS}">
 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="20" />
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
+                <ListView ItemsSource="{Binding listaCategoria }"
+                      x:Name="lstCategoria" 
+                      ItemSelected="lstCategoria_ItemSelected"
+                      Margin="5" 
+                      HasUnevenRows="True" 
+                      >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
 
-                            <Label Text="{Binding nombre}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"
-                                   FontSize="14"
-                                   />
-                            <Label Text="{Binding descripcion}" Grid.Column="0" Grid.Row="1"  />
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                <ViewCell.ContextActions>
+                                    <MenuItem  Text="Eliminar" x:Name="menuEliminar" Clicked="menuEliminar_Clicked" />
+                                </ViewCell.ContextActions>
 
 
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding nombre}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"
+                                       FontSize="14"
+                                       />
+                                    <Label Text="{Binding descripcion}" Grid.Column="0" Grid.Row="1"  />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </ScrollView>
+        </StackLayout>
 
     </ContentPage.Content>
     

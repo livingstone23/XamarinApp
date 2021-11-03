@@ -1,4 +1,4 @@
-﻿using MiPrimeraAplicacionEnXamarinForm.Clases;
+﻿using XamarinAPP.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +7,42 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinAPP.Clases;
 
 namespace XamarinAPP.ViewPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Categoria : ContentPage
     {
-        public List<CategoriaCLS> listaCategoria { get; set; }
-        public Categoria()
+
+		//Creamos propiedad estatica de clase
+		public static Categoria instance;
+
+		public EntityCLS oEntityCLS { get; set; }
+
+		private List<CategoriaCLS> lista;
+		//public List<CategoriaCLS> listaCategoria { get; set; }
+
+
+		//Crear un Metodo que nos devuelva la instancia
+		public static Categoria GetInstance()
+		{
+			if (instance == null)
+			{
+				return new Categoria();
+
+			}
+			else return instance;
+		}
+
+		public Categoria()
         {
-            InitializeComponent();
-			listaCategoria = new List<CategoriaCLS>();
-			listaCategoria.Add(new CategoriaCLS
+			instance = this;
+
+			InitializeComponent();
+			oEntityCLS = new EntityCLS();
+			oEntityCLS.listaCategoria = new List<CategoriaCLS>();
+			oEntityCLS.listaCategoria.Add(new CategoriaCLS
 			{
 				iidcategoria = 1,
 				nombre = "Gaseosa",
@@ -27,7 +51,7 @@ namespace XamarinAPP.ViewPage
 				" es una bebida saborizada, hecha con agua carbonatada, edulcorantes naturales " +
 				"como fructosa o sacarosa, o sintéticos como el ciclamato"
 			});
-			listaCategoria.Add(new CategoriaCLS
+			oEntityCLS.listaCategoria.Add(new CategoriaCLS
 			{
 				iidcategoria = 2,
 				nombre = "Galleta",
@@ -36,6 +60,7 @@ namespace XamarinAPP.ViewPage
 				" mantequilla o aceites vegetales o grasas animales."
 			});
 			//Nos sirve para que el codigo XAML conozca el valor de la propiedad "listaCategoria" 
+			lista = oEntityCLS.listaCategoria;
 			BindingContext = this;
 
 
@@ -44,12 +69,28 @@ namespace XamarinAPP.ViewPage
         private void lstCategoria_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 			CategoriaCLS objCategoria = (CategoriaCLS)e.SelectedItem;
-			Navigation.PushAsync(new FormCategorias(objCategoria,"Detalle de Categoria"));
+			Navigation.PushAsync(new FormCategorias(objCategoria, "Editar Categoria"));
 		}
 
         private void toolbarAgregar_Clicked(object sender, EventArgs e)
         {
 			Navigation.PushAsync(new FormCategorias(new CategoriaCLS(), "Agregar Categoria"));
 		}
-    }
+
+        private void menuEliminar_Clicked(object sender, EventArgs e)
+        {
+			MenuItem oMenuItem = sender as MenuItem;
+			CategoriaCLS oCategoriaCLS = (CategoriaCLS)oMenuItem.BindingContext;
+			oEntityCLS.listaCategoria = oEntityCLS.listaCategoria.Where(p => p.iidcategoria != oCategoriaCLS.iidcategoria).ToList();
+			//DisplayAlert("Aviso", oCategoriaCLS.nombre, "Cancelar");
+		}
+
+        private void searchCategoria_TextChanged(object sender, TextChangedEventArgs e)
+        {
+			string valor = e.NewTextValue;
+			if (valor == "") oEntityCLS.listaCategoria = lista;
+			else oEntityCLS.listaCategoria = lista.Where(p => p.nombre.Contains(valor)).ToList();
+			//DisplayAlert("Valor", valor, "Cancelar");
+		}
+	}
 }

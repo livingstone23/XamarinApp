@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MiPrimeraAplicacionEnXamarinForm.Clases
+namespace XamarinAPP.Clases
 {
 	public class CategoriaCLS
 	{
